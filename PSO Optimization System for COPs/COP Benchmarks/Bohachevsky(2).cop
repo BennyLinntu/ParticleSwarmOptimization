@@ -1,0 +1,21 @@
+Title: Bohachevsky(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-50 50
+-50 50
+NumberOfOptimalSolution: 1
+0 0
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+objective =  xx + 2.0 * yy - 0.3 * Math.Cos( 3.0 * Math.PI * x[0] ) - 0.4 * Math.Cos( 4.0 *  
+Math.PI * x[1] ) + 0.7;
+GradientFunction: 
+

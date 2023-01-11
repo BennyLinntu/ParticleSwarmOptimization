@@ -1,0 +1,24 @@
+Title: Quadratic Surface
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-5 5
+-5 5
+NumberOfOptimalSolution: 1
+1 -1
+BestObjectiveValue: -1
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+
+InitiationFunction: 
+
+
+ObjectiveFunction: 
+objective = x[0] * x[0] + x[0] * x[1] + x[1] * x[1] - x[0] + x[1];
+
+GradientFunction: 
+g[0] = 2.0 * x[0] + x[1] - 1.0;
+g[1] = x[0] + 2.0 * x[1] + 1.0;
+

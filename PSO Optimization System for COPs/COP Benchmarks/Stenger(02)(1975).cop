@@ -1,0 +1,22 @@
+Title: Stenger(02)(1975)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-1 4
+-1 4
+NumberOfOptimalSolution: 1
+1.69542 0.71861
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1 = xx - 4.0 * x[1];
+double t2 = yy - 2.0 * x[0] + 4.0 * x[1];
+return t1 * t1 + t2 * t2;
+GradientFunction: 
+

@@ -1,0 +1,24 @@
+Title: BraninRcos(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-5 10
+-5 10
+NumberOfOptimalSolution: 3
+-3.14156 12.275
+9.42468 2.475
+3.14156 2.275
+BestObjectiveValue: 0.3979
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double a = 1, b = 5.1 * 0.25 / Math.PI/Math.PI, c = 5 / Math.PI, d = 6, e = 10, f = 1 / 8.0 / Math.PI;
+double xx = x[0] * x[0];
+double t1 = x[1] - b * xx +c * x[0] - d;
+objective = a * t1 * t1 +  e * ( 1.0 - f  ) *  Math.Cos( x[0] )  + e;
+GradientFunction: 
+

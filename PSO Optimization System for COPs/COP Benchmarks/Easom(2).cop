@@ -1,0 +1,22 @@
+Title: Easom(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-10 10
+-10 10
+NumberOfOptimalSolution: 1
+0 0
+BestObjectiveValue: -1
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1 = x[0] - Math.PI;
+double t2 = x[1] - Math.PI;
+objective =  -Math.Cos( x[0] ) * Math.Cos( x[1] ) * Math.Exp( - t1 * t1 - t2 * t2 );
+GradientFunction: 
+

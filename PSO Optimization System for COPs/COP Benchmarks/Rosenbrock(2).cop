@@ -1,0 +1,29 @@
+Title: Rosenbrock(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-15 15
+-15 15
+NumberOfOptimalSolution: 1
+1 1
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+int D = 2;
+for( int i = 0; i < D; i++ )
+{
+    double t1, t2;
+    if( i == D - 1 )
+          t1 = x[i] * x[i] - x[0];
+    else 
+        t1 = x[i] * x[i] - x[i+1];
+    t2 = 1 - x[i];
+   objective += 100 * t1 * t1 + t2 * t2;
+}
+GradientFunction: 
+

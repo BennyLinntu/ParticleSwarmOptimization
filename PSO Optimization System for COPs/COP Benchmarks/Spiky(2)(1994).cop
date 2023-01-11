@@ -1,0 +1,20 @@
+Title: Spiky(2)(1994)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-3 12
+4 6
+NumberOfOptimalSolution: 1
+11.62523 5.72082
+BestObjectiveValue: -38.85
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+objective = -21.5 - x[0] * Math.Sin( 4.0 * Math.PI * x[0] ) - x[1] * Math.Sin( 20.0 * Math.PI * x[1] );
+               
+GradientFunction: 
+

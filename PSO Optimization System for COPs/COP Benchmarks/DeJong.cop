@@ -1,0 +1,22 @@
+Title: DeJong
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-2.048 2.048
+-2.048 2.048
+NumberOfOptimalSolution: 1
+1 1
+BestObjectiveValue: 3905.93
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0];
+double t1 = xx - x[1];
+double t2 = 1 - x[0];
+objective = 3905.93 - 100 * t1 * t1 - t2 * t2;
+GradientFunction: 
+

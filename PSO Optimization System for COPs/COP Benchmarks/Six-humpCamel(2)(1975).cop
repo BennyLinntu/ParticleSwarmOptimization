@@ -1,0 +1,21 @@
+Title: Six-humpCamel(2)(1975)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-3 3
+-2 2
+NumberOfOptimalSolution: 2
+0.0898 0.7126
+0.0898 -0.7126
+BestObjectiveValue: -1.0316
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+objective =  (4.0 - 2.1 * xx + ( xx * xx ) / 3.0 ) * xx + x[0] * x[1] + 4.0 * ( yy - 1.0 ) * yy;
+GradientFunction: 
+

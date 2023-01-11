@@ -1,0 +1,22 @@
+Title: Schwefel(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-500 500
+-500 500
+NumberOfOptimalSolution: 1
+420.9867 420.9867
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+int D = 2;
+double t1 = 0;
+for( int i = 0; i < D; i++ ) t1 += x[i] * Math.Sin( Math.Sqrt( Math.Abs(x[i]) ) );
+objective = 418.9829 * D - t1;
+GradientFunction: 
+

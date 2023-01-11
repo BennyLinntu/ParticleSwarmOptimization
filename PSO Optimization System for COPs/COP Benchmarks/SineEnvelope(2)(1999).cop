@@ -1,0 +1,24 @@
+Title: SineEnvelope(2)(1999)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-10 10
+-10 10
+NumberOfOptimalSolution: 1
+0 0
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1, t2;
+t1 = Math.Sin( Math.Sqrt( xx + yy ) );
+t1 = t1 * t1 - 0.5;
+t2 = 0.001 * ( xx + yy ) + 1.0;
+return 0.5 + t1 / t2 / t2;
+GradientFunction: 
+

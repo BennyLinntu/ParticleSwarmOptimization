@@ -1,0 +1,15 @@
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\r10546039YiDaLinAss10.exe.config
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\r10546039YiDaLinAss10.exe
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\r10546039YiDaLinAss10.pdb
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\COPBenchmark.dll
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\TeeChart.dll
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\COPBenchmark.pdb
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\COPBenchmark.xml
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\bin\Debug\TeeChart.xml
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.MainForm.resources
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.Properties.Resources.resources
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.csproj.GenerateResource.cache
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.csproj.CoreCompileInputs.cache
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.csproj.CopyComplete
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.exe
+C:\Users\Benny\System File\Desktop\NTU\Second Year, First Semester\柔性演算法\Homework\week10\r10546039YiDaLinAss10Solution\r10546039YiDaLinAss10\obj\Debug\r10546039YiDaLinAss10.pdb

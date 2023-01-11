@@ -1,0 +1,29 @@
+Title: Press(2)1993
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-2 2
+-2 2
+NumberOfOptimalSolution: 2
+0 0
+0.5 0.70710678
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double x2 = x[0] * x[0];
+double y2 = x[1] * x[1];
+double t1 = x2 * x[0] + 3 * x[0] * y2 - 1;
+double t2 = 3 * x2 * x[1] - x[1] * y2;
+objective = t1 * t1 + t2 * t2;
+GradientFunction: 
+double x2 = x[0] * x[0];
+double y2 = x[1] * x[1];
+double t1 =2 * (  x2 * x[0] + 3 * x[0] * y2 - 1 );
+double t2 =2 * (  3 * x2 * x[1] - x[1] * y2 );
+g[0] = t1 * 3 * ( x2 + y2 ) + t2 * ( 6 * x[0] * x[1] );
+g[1] = t1 * 6 * x[0] * x[1] + t2 * ( 3 * x2 - 3 * y2 );

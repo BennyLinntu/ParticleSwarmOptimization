@@ -1,0 +1,26 @@
+Title: GoldsteinPrice(2)(1975)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-2 2
+-2 2
+NumberOfOptimalSolution: 1
+0 -1
+BestObjectiveValue: 3
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1 = x[0] + x[1] + 1.0;
+double t2 = 19.0 - 14.0 * x[0] + 3.0 * xx - 14.0 * x[1] + 6.0 * x[0] * x[1] + 3.0 * yy;
+double t3 = t1 * t1 * t2 + 1.0;
+t1 = 2.0 * x[0] - 3.0 * x[1];
+t2 = 18.0 - 32.0 * x[0] + 12.0 * xx + 48.0 * x[1] - 36.0 * x[0] * x[1] + 27.0 * yy;
+t2 = t1 * t1 * t2 + 30.0;
+objective =  t3 * t2;
+GradientFunction: 
+

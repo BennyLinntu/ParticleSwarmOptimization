@@ -1,0 +1,22 @@
+Title: Schaffer#2(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-10 10
+-10 10
+NumberOfOptimalSolution: 1
+0 0
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1 = 50.0 * Math.Pow( ( xx + yy ), 0.1 );
+t1 = t1 * t1 + 1.0;
+objective =  Math.Pow( (xx + yy ), 0.25 ) * t1;
+GradientFunction: 
+

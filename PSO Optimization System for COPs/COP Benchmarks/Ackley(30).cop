@@ -1,0 +1,59 @@
+Title: Ackley(30)
+Type: Minimization
+Dimension: 30
+LowerBoundsUpperBounds: Enumerate
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+-32.768 32.768
+NumberOfOptimalSolution: 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+int D = 30;
+double twoPI = Math.PI * 2;
+
+double t1 =0, t2 =0;
+for( int i = 0; i < D; i++ ) t1 += x[i] * x[i];
+
+t1 = -0.2 * ( Math.Sqrt( t1 / D));
+
+for( int i =0; i < D; i++ ) t2 += Math.Cos( twoPI*x[i] );
+
+t2 = t2 / D;
+
+objective = 20 + Math.E - 20 * Math.Exp( t1 ) - Math.Exp( t2 );
+GradientFunction: 
+

@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>COPBenchmark</name>
+    </assembly>
+    <members>
+        <member name="P:COP.COPObjectiveDisplay.TheTeeChart">
+            <summary>
+             Exposed TeeChart component. User may take advantages of this embedded TeeChart object to freely
+             add series to the chart by accessing its properties.
+            </summary>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.#ctor(COP.COPBenchmark)">
+            <summary>
+             This user control display UIs for displaying the objective of a COP problem.
+             The objective is projected on a 2-D coordinate plane and therefore, turns out to
+             be a surface on 3D space.
+            </summary>
+            <param name="problem"> the COP problem </param>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.DrawSolutions(System.Double[][])">
+            <summary>
+             Draw a set of sultions as points on the objective surface.
+             The objective value is run-time computed.
+            </summary>
+            <param name="solutions"> Set of solutions </param>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.DrawSolutions(System.Double[][],System.Double[])">
+            <summary>
+              Draw a set of sultions as points on the objective surface.
+            </summary>
+            <param name="solutions"> Set of solutions </param>
+            <param name="objectives"> set of computed objective values </param>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.DrawOptima">
+            <summary>
+              Draw points of known optima.
+            </summary>
+        </member>
+        <member name="F:COP.COPObjectiveDisplay.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:COP.COPObjectiveDisplay.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="T:COP.COPProblemDisplay">
+            <summary>
+             Visualization control to display optimization problem definition data.
+             一個使用者控制項，用以展示一個COP標竿問題的各種屬性資料。
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemDisplay.#ctor(System.Boolean)">
+            <summary>
+             Constructor for a COP property display.
+             建構式。
+            </summary>
+            <param name="readOnly">Whether the problem is readonly</param>
+        </member>
+        <member name="M:COP.COPProblemDisplay.#ctor(COP.COPBenchmark,System.Boolean)">
+            <summary>
+            Constructor for displaying a given problem.
+             建構函式。
+            </summary>
+            <param name="aproblem">Displayed COP</param>
+            <param name="readOnly">Whether the COP is read only</param>
+        </member>
+        <member name="M:COP.COPProblemDisplay.updateProblemFromUIs">
+            <summary>
+             Update the properties of the specified problem based on the modified user interfaces.
+             由使用者的變更設定更新COP問題的屬性資料。
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemDisplay.changeProblem(COP.COPBenchmark)">
+            <summary>
+             Change the target problem
+             更換展示的COP標竿問題
+            </summary>
+            <param name="newProblem">The new target problem</param>
+        </member>
+        <member name="M:COP.COPProblemDisplay.areContentsModified">
+            <summary>
+             Whether contents have been modifed.
+             是否COP標竿問題的屬性資料已遭修改。
+            </summary>
+            <returns>Modified or Not</returns>
+        </member>
+        <member name="P:COP.COPProblemDisplay.ReadOnly">
+            <summary>
+             Whether the problem is read only; i.e., no modification is allowed.
+             展示的屬性資料是否是唯讀不准修改。
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemDisplay.updateUIEnabilities">
+            <summary>
+             Update the editing properties for the controls based on the editability of the display.
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemDisplay.updateUIsFromProblem">
+            <summary>
+            Update the user interfaces based on the specified problem.
+            </summary>
+        </member>
+        <member name="F:COP.COPProblemDisplay.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemDisplay.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:COP.COPProblemDisplay.InitializeComponent">
+             <summary> 
+             此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改這個方法的內容。
+            
+             </summary>
+        </member>
+        <member name="T:COP.COPProblemEditor">
+            <summary>
+             A windows form for COP editing.
+             一個COP標竿問題的視窗編輯介面。
+            </summary>
+        </member>
+        <member name="F:COP.COPProblemEditor.problemModified">
+            <summary>
+             Whether the problem is modified.
+             是否問題已經有修改。
+            </summary>
+        </member>
+        <member name="F:COP.COPProblemEditor.problemValid">
+            <summary>
+             Whether the problem is valid or compiled successfully.
+             是否問題的程式定義完整無誤，亦即程式碼是否編譯無誤。
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemEditor.#ctor(COP.COPBenchmark)">
+            <summary>
+             Constructor for a given known problem that is under modification.
+             建構子。
+            </summary>
+            <param name="aProblem">The problem</param>
+        </member>
+        <member name="M:COP.COPProblemEditor.updateUIsFromProblem">
+            <summary>
+             Update UIs' values from the specified problem.
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemEditor.updateProblemFromUIs">
+            <summary>
+            Update the model from the modifications on the user interfaces.
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemEditor.btnVaridate_Click(System.Object,System.EventArgs)">
+            <summary>
+            Validate the currently written souce code.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:COP.COPProblemEditor.btnAddAssembly_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add one additional assmebly for linking.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:COP.COPProblemEditor.isCodeOK">
+            <summary>
+            Check whether the souce code is OK or NOT.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:COP.COPProblemEditor.tsbSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Save the current problem.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:COP.COPProblemEditor.tsbExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Exiting function called.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:COP.COPProblemEditor.LanguageChanged(System.Object,System.EventArgs)">
+            <summary>
+            When programming language is changed, update the user interfaces. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:COP.COPProblemEditor.areContentsModified">
+            <summary>
+             Whether modifications have been made to the contents.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:COP.COPProblemEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:COP.COPProblemEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:COP.COPProblemEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:COP.COPBenchmark">
+            <summary>
+            This class defines required information for a continuous real number optimization problem.
+            Only single objective problem is considered and multiple optimum solutions are allowed.
+            Restricted within a finite bound on each dimension, the problem does not have external 
+            constraints.
+            This class is associated with a problem definition file with extension name "cop" and a
+            rich text formatted description file. Both of them share the same root file name.
+            The rtf description file is optional and the cop file is a UniCoded well formatted file.
+            At least the souce code writtern in either C# or VS of the objective function shoul be
+            provided. The gradient vector computation function is optional. The best objective value 
+            and optimal solutions may remain unknown.
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.ValidateSouceCode(COP.ProgrammingLanguage,System.String[],System.String,System.String,System.String,System.String)">
+            <summary>
+             Global utility function to check whether the user supplied souce code can be successfully compiled.
+             透過實際模擬編譯，查驗某cop問題定義的程式碼，是否有語法錯誤。
+            </summary>
+            <param name="language">Programming language</param>
+            <param name="assemblies">Linked assemblies</param>
+            <param name="dataDefinition">Customer data declaration/definition statements</param>
+            <param name="initializationCode">Customer code embedded in the constructor</param>
+            <param name="objectiveFunctionCode">Customer code for objective evaluation</param>
+            <param name="gradientVectorCode">Customer code for gradient vector computation</param>
+            <returns>Success or failed</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.CreateANewProblemAndShowEditor">
+            <summary>
+             Create an empty real number optimization problem and popup an editing form for problem modeling.
+             產生一個陽春的COP問題物件，並顯示編輯視窗進行設定。
+            </summary>
+            <returns>A valid optimization problem or null</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.CreateANewProblemAndShowEditor(System.String)">
+            <summary>
+             Create an empty real number optimization problem and popup an editing form for problem modeling.
+             產生一個陽春的COP問題物件，並顯示編輯視窗進行設定。
+            </summary>
+            <param name="directoryPath">Directory for file saving</param>
+            <returns>The created COP object or null</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.ShowEditorToEditAProblem(COP.COPBenchmark)">
+            <summary>
+             Popup problem editing dialog for the user to modify the content of the given problem
+             顯示編輯視窗，進行問題編輯。
+            </summary>
+            <param name="aProblem">The problem subject to modification</param>
+        </member>
+        <member name="M:COP.COPBenchmark.DisplayAProblemOnPanel(COP.COPBenchmark,System.Windows.Forms.Panel)">
+            <summary>
+             Display a user control listing properties of the specified COP on a selected Panel object.
+             將問題的屬性資料秀在設定的視窗區塊上。
+            </summary>
+            <param name="aProblem">The COP</param>
+            <param name="theHost">The Panel object displaying the problem</param>
+        </member>
+        <member name="M:COP.COPBenchmark.DisplayObjectiveGraphicsOfAProblem(COP.COPBenchmark,System.Windows.Forms.Panel)">
+            <summary>
+             Display a 2D surface on 3D graphics to show the projection of the objective ontto
+             2D-space. Usually this is to dispalay dimension=2 continuous optimiation problem
+            </summary>
+            <param name="aProblem"> the COP problem </param>
+            <param name="theHost"> The host UI control </param>
+        </member>
+        <member name="F:COP.COPBenchmark.fileDlg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.LoadAProblemFromAFile">
+            <summary>
+             Popup a file open dialog to open input files. Then read the file to create a problem. 
+             開啟開檔對話盒，由使用者選定COP標竿問題，產生COP物件。
+            </summary>
+            <returns>A valid problem or null</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.LoadAProblemFromAFile(System.String)">
+            <summary>
+             Open the specified input file to read the saved problem.
+             由設定的檔案路徑載入一個標竿問題，產生cop物件。
+            </summary>
+            <param name="fullFilePath">The file path</param>
+            <returns>A valid problem or null</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.#ctor">
+            <summary>
+             Default constructor.
+             COP物件建構函式。
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.ReadInAProblem(System.String)">
+            <summary>
+             Read in a problem from a saved file.
+             由檔案讀取本COP物件的相關屬性資料。
+            </summary>
+            <param name="filePath">File path</param>
+            <returns>ture, if a valid problem is generated; false, otherwise</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.SaveTheProblem">
+            <summary>
+             Save the problem into a well-formatted cop text file and a rich text formatted description file.
+             顯示存檔對話盒，將本COP物件屬性資料存成文字檔。
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.GetObjectiveValue(System.Double[])">
+            <summary>
+             Objective value evaluation method.
+             求算本COP物件定義的目標函數值。
+            </summary>
+            <param name="x">Position vector</param>
+            <returns>The objective value</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.GetGradientVector(System.Double[])">
+            <summary>
+             Gradient vector computation method.
+             檢出本COP物件定義的梯度向量。
+            </summary>
+            <param name="x">Position vector</param>
+            <returns>Gradient vector at the given position</returns>
+        </member>
+        <member name="M:COP.COPBenchmark.ShowEditor">
+            <summary>
+             Popup problem editing dialog for the user to modify the content of this problem
+             顯示編輯視窗，進行本問題編輯。
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.DisplayOnPanel(System.Windows.Forms.Panel)">
+            <summary>
+             Display a user control listing properties of this COP on a selected Panel object.
+             將本問題的屬性資料秀在設定的視窗區塊上。
+            </summary>
+            <param name="theHost">The Panel object displaying the problem</param>
+        </member>
+        <member name="M:COP.COPBenchmark.ShowEditorToEdit">
+            <summary>
+             Popup editing dialog for the user to modify the content of this problem
+             顯示編輯視窗，進行本問題編輯。
+            </summary>
+        </member>
+        <member name="M:COP.COPBenchmark.DisplayObjectiveGraphics(System.Windows.Forms.Panel)">
+            <summary>
+             Display a 2D surface on 3D graphics to show the projection of the objective onto
+             2D-space. Usually this is to dispalay dimension=2 continuous optimiation problem
+            </summary>
+            <param name="theHost"> The host UI control </param>
+        </member>
+        <member name="M:COP.COPBenchmark.DisplaySolutionsOnGraphics(System.Double[][])">
+            <summary>
+             Display the current positions of particles on the objective surface.
+            </summary>
+            <param name="sols"> The set of solution particles </param>
+        </member>
+        <member name="M:COP.COPBenchmark.createExecutionObjectAndMethodInfos(System.Boolean)">
+            <summary>
+             Compile the ource code to generate an assembly, instantanciate an object of the function evaluation class, and record the 
+             method information for further invocation. 
+             產生本COP物件編譯後，可以執行運算的物件及其功能函式物件。
+            </summary>
+            <returns>ture, when the method infos are created successfully; false, otherwise</returns>
+        </member>
+        <member name="P:COP.COPBenchmark.TheTeeChart">
+            <summary>
+             Exposed TeeChart component. User may take advantages of this embedded TeeChart object to freely
+             add series to the chart by accessing its properties and methods.
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.FilePath">
+            <summary>
+             The file path of the associated cop data definition file.
+             定義本COP物件的文字檔路徑。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.Title">
+            <summary>
+             Title of the problem.
+             本COP問題名稱。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.LinkedAssemblies">
+            <summary>
+             The customer specified file pathes fo the linked assembly files. 
+             本COP夾帶參考的DLL組件。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.ObjectiveEvaluationCode">
+            <summary>
+             Souce code for objective vlaue evaluation.
+             求算目標函數值的函式原始文案。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.GradientComputationCode">
+            <summary>
+             Source code for computing the gradient vector.
+             求算梯度向量的函式原始文案。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.InstanceDataInitializationCode">
+            <summary>
+             Souce code that initialize the instance scoped data in the constructor.
+             執行初始化的函式原始文案。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.DataFieldsDefinitionCode">
+            <summary>
+             Souce code ofthe statements for instance data definitions.
+             定義資料欄位的原始程式文案。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.Description">
+            <summary>
+             The problem description context which is in rtf format.
+             本COP問題的說明文案。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.Dimension">
+            <summary>
+             The number of real number variables in the specified problem.
+             本COP問題的變數數量。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.LowerBound">
+            <summary>
+             The lower bounds of all the real number variables.
+             本COP問題，各維度的下限值。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.UpperBound">
+            <summary>
+             The upper bounds of all the ral number variables.
+             本COP問題，各維度的上限值。
+            </summary>
+        </member>
+        <member name="F:COP.COPBenchmark.optimalSolutions">
+            <summary>
+             The known optimal solution(s) to this benchmark.
+             本COP問題，已知的最佳解(可以有多個)。
+             </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.OptimalSolutions">
+            <summary>
+             The known optimal solution(s) to this benchmark.
+             本COP問題，已知的最佳解(可以有多個)。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.OptimalSolutionsKnown">
+            <summary>
+             Whether the optimal solution(s) is(are) known.
+             本COP問題，是否有已知全域最佳解(可以有多個)。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.BestObjectiveValue">
+            <summary>
+             The best objective value yielded from the optimal solution(s).
+             本COP問題，已知全域最佳目標函數值。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.OptimizationGoal">
+            <summary>
+             The optimization goal for the specified problem.
+             本COP問題的優化目標類型。
+            </summary>
+        </member>
+        <member name="P:COP.COPBenchmark.CodingLanguage">
+            <summary>
+             The programming languages used in specifying the souce code of the evaluation functions.
+             定義本COP問題的文字檔使用的程式語言，可以是C#或VB。
+            </summary>
+        </member>
+        <member name="T:COP.OptimizationType">
+            <summary>
+             The enumeration of possible optimization goals.
+             優化問題優化形式的枚舉。
+            </summary>
+        </member>
+        <member name="F:COP.OptimizationType.Minimization">
+            <summary>
+             Minimization Problem
+             望小
+            </summary>
+        </member>
+        <member name="F:COP.OptimizationType.Maximization">
+            <summary>
+             Maximization Problem
+             望大
+            </summary>
+        </member>
+        <member name="F:COP.OptimizationType.GoalMatching">
+            <summary>
+             Goal Matching Problem
+             望目標值
+            </summary>
+        </member>
+        <member name="T:COP.ProgrammingLanguage">
+            <summary>
+             The enumeration of allowable programming languages in specifying the evaluation functions.
+             定義COP標竿問題，可使用的程式語言。
+            </summary>
+        </member>
+        <member name="F:COP.ProgrammingLanguage.CSharp">
+            <summary>
+             C# programming language
+            </summary>
+        </member>
+        <member name="F:COP.ProgrammingLanguage.VisualBasic">
+            <summary>
+             Visual Basic language
+            </summary>
+        </member>
+    </members>
+</doc>

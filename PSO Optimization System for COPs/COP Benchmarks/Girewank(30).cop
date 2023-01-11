@@ -1,0 +1,54 @@
+Title: Girewank(30)
+Type: Minimization
+Dimension: 30
+LowerBoundsUpperBounds: Enumerate
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+-600 600
+NumberOfOptimalSolution: 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+int D = 30;
+double t1 = 0.0;
+double t2 = 0.0;
+for( int i = 0; i < D; i++ )
+    t1 += x[i] * x[i];
+for( int i = 0; i < D; i++ )
+    t2 *= Math.Cos( x[i] / Math.Sqrt( i+1) );
+objective = t1 / 4000.0 - t2 + 1;
+GradientFunction: 
+

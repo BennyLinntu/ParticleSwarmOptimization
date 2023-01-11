@@ -1,0 +1,21 @@
+Title: McCormic(2)
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-1.5 4
+-3 4
+NumberOfOptimalSolution: 1
+-0.54719 -1.54719
+BestObjectiveValue: -1.9133
+NumberOfLinkedAssemblies: 0
+CodingLanguage: CSharp
+GlobalDefinition: 
+
+InitiationFunction: 
+
+ObjectiveFunction: 
+double xx = x[0] * x[0], yy = x[1] * x[1];
+double t1 = x[0] - x[1];
+objective =   Math.Sin( x[0] + x[1] )  + t1 * t1 - 1.5 * x[0] + 2.5 * x[1] + 1.0;
+GradientFunction: 
+

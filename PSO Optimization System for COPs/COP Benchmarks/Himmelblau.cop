@@ -1,0 +1,42 @@
+Title: Himmelblau
+Type: Minimization
+Dimension: 2
+LowerBoundsUpperBounds: Enumerate
+-10 10
+-10 10
+NumberOfOptimalSolution: 2
+3 2
+-2.805118 3.131312
+BestObjectiveValue: 0
+NumberOfLinkedAssemblies: 0
+CodeingLanguage: CSharp
+GlobalDefinition: 
+
+
+
+
+
+InitiationFunction: 
+
+
+
+
+
+ObjectiveFunction: 
+double t1 = x[0] * x[0] + x[1] - 11.0;
+double t2 = x[0] + x[1] * x[1] - 7.0;
+
+objective = t1 * t1 + t2 * t2;
+
+
+
+
+GradientFunction: 
+double t1 = x[0] * x[0] + x[1] - 11.0;
+double t2 = x[0] + x[1] * x[1] - 7.0;
+g[0] = 4 * x[0] * t1 + 2.0 * t2;
+g[1] = 2.0 * t1 + 4.0 * t2 * x[1];
+
+
+
+
